@@ -10,3 +10,6 @@ class Project(models.Model):
     linkGit = models.URLField(max_length=666, default='', blank=True)
     linkDepl = models.URLField(max_length=666, default='', blank=False)
     year = models.DateField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
