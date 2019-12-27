@@ -23,14 +23,16 @@
             architecto beatae vitae dicta sunt explicabo.
             </p>
 
-            <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a>
+            <div class="links">
+                <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a>
+            </div>
         </div>
     </div>
 
     <div class="projects">
     
         {% for project in projects %}
-            <div class="project" style="background-img: url('{{ project.img }}');">
+            <div class="project" style="background-image: url('{{ project.img }}');">
                 {{ project.name }}
                 <br> 
                 <a href="{{ project.linkGit }}" target="_blank">GitHub</a>

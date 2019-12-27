@@ -52,8 +52,17 @@ body {
     font-family: $font-family; 
 }
 
+a {
+    color: $emphasis;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
+}
+
 .about {
-    @include flex();
+    width: 100vw;
 }
 
 .image {
@@ -63,23 +72,30 @@ body {
 
 .intro {
     width: 100%;
+    display: block;
+    position: relative;
+    float: no-float;
 
-    a {
-        color: $main-color;
-        display: inline-block;
-        border: 1px solid $emphasis;
-        text-decoration: none;
-        padding: 2px;
+    .links {
+        @include flex();
+    
+        a {
+            color: $main-color;
+            display: inline-block;
+            border: 1px solid $emphasis;
+            text-decoration: none;
+            padding: 2px;
 
-        @include hvr-grow();
-    }
+            @include hvr-grow();
+        }
 
-    a:hover {
-        color: $secondary-color;
-        border: 1px solid $secondary-color;
-        text-decoration: none;
+        a:hover, a:active, a:focus {
+            color: $secondary-color;
+            border: 1px solid $secondary-color;
+            text-decoration: none;
 
-        @include hvr-grow-active();
+            @include hvr-grow-active();
+        }
     }
 }
 
@@ -88,11 +104,18 @@ body {
 }
 
 .project {
-    width: 100px;
-    height: 100px;
+    display: block;
+    width: 90vw;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
+}
+
+.footer {
+    background-color: $alt-bg-color;
+    padding: 20px 0px 20px 15px;
+    margin-top: 60px;
 }
 
 
