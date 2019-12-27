@@ -4,7 +4,7 @@
 /* inchworm */
  @font-face {
 	 font-family: 'DINPro-Regular';
-	 src: url('static/fonts/DINPro-Regular_13937') format('woff');
+	 src: url('/static/fonts/DINPro-Regular_13937.woff') format('woff');
 }
  body {
 	 background-color: #141414;
