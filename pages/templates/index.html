@@ -24,7 +24,7 @@
             </p>
 
             <div class="links">
-                <a href="#">Link 1</a> <a href="#">Link longer 2</a> <a href="#">L i </a> <a href="#">Laaaaaaaaaaaa</a> <a href="#">La 1</a> <a href="#">La 1</a> <a href="#">La 1</a>
+                <a href="https://www.linkedin.com/in/katarzyna-sapa/">LinkedIn</a> <a href="https://github.com/Ardhanari">GitHub</a> <a href="#">E-mail</a> <a href="#">La 1</a> <a href="#">La 1</a>
             </div>
         </div>
     </div>
@@ -32,9 +32,9 @@
     <div class="projects">
     
         {% for project in projects %}
-            <div class="project" style="background-image: url('{{ project.img }}');">
+            <div class="project" style="background-image: url('images/{{ project.img }}');">
                 <div class="project-row">
-                    {{ project.name }}
+                    <h5>{{ project.name }}</h5>
                 </div>
 
                 <div class="project-row">

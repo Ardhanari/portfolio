@@ -57,7 +57,7 @@ a:hover, a:active, a:focus {
       display: flex;
       border: 1px solid #B0FE76;
       text-decoration: none;
-      padding: 2px;
+      padding: 2px 20px;
       margin: 5px;
       display: inline-block;
       vertical-align: middle;
@@ -80,8 +80,7 @@ a:hover, a:active, a:focus {
   grid-template-columns: repeat(12, 1fr); }
 
 .project {
-  padding: 30px 10px 30px 10px;
-  margin: 10px 10px 0 0;
+  padding: 10px 10px 30px 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,12 +94,14 @@ a:hover, a:active, a:focus {
   grid-column: span 12; }
   @media (min-width: 1000px) {
     .project {
-      grid-column: span 3; } }
+      grid-column: span 3;
+      margin: 10px 10px 0 0; } }
 
 .project-row {
   display: block;
   margin: auto;
-  text-align: center; }
+  text-align: center;
+  padding: 15px 0px 0px 0px; }
 
 .footer {
   background-color: #141414;
