@@ -12,19 +12,19 @@
 <body>
 <div class="wrapper">
     <div class="about">
-        <div class="image">
-            <img src="https://media.licdn.com/dms/image/C5603AQFkPR8F4f0ywQ/profile-displayphoto-shrink_200_200/0?e=1582761600&v=beta&t=r03tw_YpzqbwtiXaUH_IiLli2ysB4SZDy6545FqDi9I">
-        </div>
+        
 
         <div class="intro">
             <h1> Katya Sapa portfolio</h1> 
+
+            <img src="https://media.licdn.com/dms/image/C5603AQFkPR8F4f0ywQ/profile-displayphoto-shrink_200_200/0?e=1582761600&v=beta&t=r03tw_YpzqbwtiXaUH_IiLli2ysB4SZDy6545FqDi9I">
             <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
             architecto beatae vitae dicta sunt explicabo.
             </p>
 
             <div class="links">
-                <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a> <a href="#">Link 1</a>
+                <a href="#">Link 1</a> <a href="#">Link longer 2</a> <a href="#">L i </a> <a href="#">Laaaaaaaaaaaa</a> <a href="#">La 1</a> <a href="#">La 1</a> <a href="#">La 1</a>
             </div>
         </div>
     </div>
@@ -33,12 +33,23 @@
     
         {% for project in projects %}
             <div class="project" style="background-image: url('{{ project.img }}');">
-                {{ project.name }}
-                <br> 
-                <a href="{{ project.linkGit }}" target="_blank">GitHub</a>
-                <a href="{{ project.linkDepl }}" target="_blank">Production</a>
+                <div class="project-row">
+                    {{ project.name }}
+                </div>
+
+                <div class="project-row">
+                    <a href="{{ project.linkGit }}" target="_blank">GitHub</a>
+                </div>
+
+                <div class="project-row">
+                    <a href="{{ project.linkDepl }}" target="_blank">Production</a>
+                </div>
+
+                <div class="project-row">
+                    {{ project.year }}
+                </div>
                 
-                {{ project.year }}
+                
             </div>
         {% endfor %}
 

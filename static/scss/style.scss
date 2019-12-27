@@ -7,6 +7,8 @@ $emphasis: #B0FE76; /* inchworm */
 $font-family: 'DINPro-Regular';
 $url: '/static/fonts/DINPro-Regular_13937.woff';
 
+$desktop: 1000px;
+
 /*!
  * Hover.css (http://ianlunn.github.io/Hover/)
  * Version: 2.3.2
@@ -52,6 +54,12 @@ body {
     font-family: $font-family; 
 }
 
+.wrapper {
+    @media (min-width: $desktop) {
+        width: 1000px;
+    }
+}
+
 a {
     color: $emphasis;
     text-decoration: none;
@@ -62,35 +70,44 @@ a:hover, a:active, a:focus {
 }
 
 .about {
-    width: 100vw;
-}
-
-.image {
-    display: block;
-    width: 300px; /* it needs to change */
+    // width: 90vw;
+    margin-bottom: 30px;
+    @media (min-width: $desktop) {
+        height: 300px;
+    }
 }
 
 .intro {
     width: 100%;
     display: block;
     position: relative;
-    float: no-float;
+
+    img {
+        float: left;
+        padding: 10px;
+        border-radius: 150px;
+    }
 
     .links {
-        @include flex();
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        align-content: space-around;
+        flex-wrap: wrap;
     
         a {
             color: $main-color;
-            display: inline-block;
+            display: flex;
             border: 1px solid $emphasis;
             text-decoration: none;
             padding: 2px;
+            margin: 5px;
 
             @include hvr-grow();
         }
 
         a:hover, a:active, a:focus {
-            color: $secondary-color;
+            color: $main-color;
             border: 1px solid $secondary-color;
             text-decoration: none;
 
@@ -100,28 +117,47 @@ a:hover, a:active, a:focus {
 }
 
 .projects {
-    @include flex();
+    // @include flex();
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 .project {
-    display: block;
-    width: 90vw;
-    height: 300px;
+    // display: block;
+    // width: 90vw;
+    // height: 300px;
+    padding: 30px 10px 30px 10px;
+    margin: 10px 10px 0 0;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
+    vertical-align: center;
+    /* display: flex; */
+    /*justify-content: space-evenly;
+    align-items: flex-start;
+    align-cont
+    ent: space-around;
+    flex-wrap: wrap; */
+    grid-column: span 12;
+    @media (min-width: $desktop) {
+        grid-column: span 3;
+        // width: 300px;
+        // height: 300px;
+    }
+}
+
+.project-row {
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
 .footer {
     background-color: $alt-bg-color;
     padding: 20px 0px 20px 15px;
     margin-top: 60px;
-}
-
-
-@media (min-width: 1024px) {
-    .content {
-        width: 1000px;
+    @media (min-width: $desktop) {
+        position: fixed;
+        bottom: 0;
     }
 }
-
