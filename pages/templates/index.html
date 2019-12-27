@@ -1,10 +1,13 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Katya Sapa portfolio</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="content">
@@ -12,12 +15,14 @@
         </div>
 
         <div class="intro">
+            <h1> Katya Sapa portfolio</h1> 
         </div>
 
         <div class="projects">
         
         {% for project in projects %}
-            {{ project.name }}
+            <a href="{% static 'css/style.css' %}">{{ project.name }}</a>
+            <img src="{% static 'css/img.jpg' %}">
             {{ project.year }}
         {% endfor %}
 
@@ -25,6 +30,7 @@
     </div>
 
     <div class="footer">
+    Written from scratch. All files available on <a href="" target="_blank">GitHub</a>. (c) 2019
     </div>
 </body>
 </html>

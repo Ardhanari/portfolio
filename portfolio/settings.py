@@ -25,7 +25,10 @@ SECRET_KEY = '+192grgw2s26nc^7lu*y^u0cw#kl#4h#v_bk9g1az8n(zrk=*0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+PORT='8000'
+IP = '0.0.0.0'
+
+ALLOWED_HOSTS = ['8000-e0645ec8-c0a4-42af-bf14-5513e09edd36.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -120,3 +123,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

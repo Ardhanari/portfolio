@@ -1,0 +1,26 @@
+/* licorice */
+/* platinum */
+/* think bout it */
+/* inchworm */
+ @font-face {
+	 font-family: 'DINPro-Regular';
+	 src: url('static/fonts/DINPro-Regular_13937') format('woff');
+}
+ body {
+	 background-color: #141414;
+	 color: #e8e8e8;
+	 font-family: 'DINPro-Regular';
+}
+ .image {
+	 width: 100px;
+	/* it needs to change */
+}
+ .intro {
+	 width: 100%;
+}
+ @media (min-width: 1024px) {
+	 .content {
+		 width: 900px;
+	}
+}
+ 

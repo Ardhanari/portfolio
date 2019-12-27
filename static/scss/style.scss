@@ -7,23 +7,23 @@ $emphasis: #B0FE76; /* inchworm */
 $font-family: 'DINPro-Regular';
 $url: 'static/fonts/DINPro-Regular_13937';
 
-@mixin font-face($font-family, $url) {
-	@font-face {
-		font-family: '#{$font-family}';
-		// src: url('#{$url}.eot');
-		src: /*url('#{$url}.eot?#iefix') format('embedded-opentype'),*/
-		     url('#{$url}.woff') format('woff');
-		     /* url('#{$url}.ttf') format('truetype'),
-		     url('#{$url}.svg') format('svg'); */
-		font-weight: normal;
-		font-style: normal;
-	}
+@font-face {
+    font-family: $font-family;
+    src: url($url) format('woff');
 }
 
 body {
     background-color: $alt-bg-color;
     color: $main-color;
     font-family: $font-family; 
+}
+
+.image {
+    width: 100px; /* it needs to change */
+}
+
+.intro {
+    width: 100%
 }
 
 
