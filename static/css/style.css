@@ -21,6 +21,11 @@ body {
   color: #E8E8E8;
   font-family: "DINPro-Regular"; }
 
+h5 {
+  font-size: 2em;
+  margin-block-start: 1em;
+  margin-block-end: 1em; }
+
 .wrapper {
   width: 100vw; }
   @media (min-width: 1000px) {
@@ -85,7 +90,13 @@ a:hover, a:active, a:focus {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); }
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  padding: 10px;
+  background-color: #141414; }
+  @media (min-width: 1000px) {
+    .projects {
+      padding: 25px 25px 25px 25px; } }
 
 .project {
   padding: 10px 10px 30px 10px;

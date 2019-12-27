@@ -54,6 +54,12 @@ body {
     font-family: $font-family; 
 }
 
+h5 {
+    font-size: 2em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
 .wrapper {
     width: 100vw;
     @media (min-width: $desktop) {
@@ -127,6 +133,12 @@ a:hover, a:active, a:focus {
     // @include flex();
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    padding: 10px; 
+    background-color: $alt-bg-color;
+    @media (min-width: $desktop) {
+        padding: 25px 25px 25px 25px;   
+    }
 }
 
 .project {
