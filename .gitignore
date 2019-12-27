@@ -5,3 +5,6 @@ db.sqlite3
 .gitpod.yml
 
 images/
+
+node_modules/
+package-lock.json
