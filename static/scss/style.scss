@@ -7,6 +7,40 @@ $emphasis: #B0FE76; /* inchworm */
 $font-family: 'DINPro-Regular';
 $url: '/static/fonts/DINPro-Regular_13937.woff';
 
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.3.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+ * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
+ */
+/* 2D TRANSITIONS */
+/* Grow */
+@mixin hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+@mixin hvr-grow-active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: space-around;
+}
+
+
 @font-face {
     font-family: $font-family;
     src: url($url) format('woff');
@@ -18,18 +52,53 @@ body {
     font-family: $font-family; 
 }
 
+.about {
+    @include flex();
+}
+
 .image {
-    width: 100px; /* it needs to change */
+    display: block;
+    width: 300px; /* it needs to change */
 }
 
 .intro {
-    width: 100%
+    width: 100%;
+
+    a {
+        color: $main-color;
+        display: inline-block;
+        border: 1px solid $emphasis;
+        text-decoration: none;
+        padding: 2px;
+
+        @include hvr-grow();
+    }
+
+    a:hover {
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+        text-decoration: none;
+
+        @include hvr-grow-active();
+    }
+}
+
+.projects {
+    @include flex();
+}
+
+.project {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 
 @media (min-width: 1024px) {
     .content {
-        width: 900px;
+        width: 1000px;
     }
 }
 

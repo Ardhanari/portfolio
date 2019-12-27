@@ -2,6 +2,9 @@
 /* platinum */
 /* think bout it */
 /* inchworm */
+/*! * Hover.css (http://ianlunn.github.io/Hover/) * Version: 2.3.2 * Author: Ian Lunn @IanLunn * Author URL: http://ianlunn.co.uk/ * Github: https://github.com/IanLunn/Hover * Hover.css Copyright Ian Lunn 2017. Generated with Sass. */
+/* 2D TRANSITIONS */
+/* Grow */
  @font-face {
 	 font-family: 'DINPro-Regular';
 	 src: url('/static/fonts/DINPro-Regular_13937.woff') format('woff');
@@ -11,16 +14,59 @@
 	 color: #e8e8e8;
 	 font-family: 'DINPro-Regular';
 }
+ .about {
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: flex-start;
+	 align-content: space-around;
+}
  .image {
-	 width: 100px;
+	 display: block;
+	 width: 300px;
 	/* it needs to change */
 }
  .intro {
 	 width: 100%;
 }
+ .intro a {
+	 color: #e8e8e8;
+	 display: inline-block;
+	 border: 1px solid #b0fe76;
+	 text-decoration: none;
+	 padding: 2px;
+	 display: inline-block;
+	 vertical-align: middle;
+	 -webkit-transform: perspective(1px) translateZ(0);
+	 transform: perspective(1px) translateZ(0);
+	 box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	 -webkit-transition-duration: 0.3s;
+	 transition-duration: 0.3s;
+	 -webkit-transition-property: transform;
+	 transition-property: transform;
+}
+ .intro a:hover {
+	 color: #585949;
+	 border: 1px solid #585949;
+	 text-decoration: none;
+	 -webkit-transform: scale(1.1);
+	 transform: scale(1.1);
+}
+ .projects {
+	 display: flex;
+	 justify-content: flex-start;
+	 align-items: flex-start;
+	 align-content: space-around;
+}
+ .project {
+	 width: 100px;
+	 height: 100px;
+	 background-position: center;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+}
  @media (min-width: 1024px) {
 	 .content {
-		 width: 900px;
+		 width: 1000px;
 	}
 }
  
