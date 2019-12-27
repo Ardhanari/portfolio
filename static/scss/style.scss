@@ -49,12 +49,13 @@ $desktop: 1000px;
 }
 
 body {
-    background-color: $alt-bg-color;
+    background-color: $bg-color;
     color: $main-color;
     font-family: $font-family; 
 }
 
 .wrapper {
+    width: 100vw;
     @media (min-width: $desktop) {
         width: 1000px;
     }
@@ -73,18 +74,24 @@ a:hover, a:active, a:focus {
     // width: 90vw;
     margin-bottom: 30px;
     @media (min-width: $desktop) {
-        height: 300px;
+        height: 350px;
     }
 }
 
 .intro {
     width: 100%;
+    height: inherit;
     display: block;
     position: relative;
+    padding: 10px; 
+    background-color: $alt-bg-color;
+    @media (min-width: $desktop) {
+        padding: 25px 25px 0px 25px;   
+    }
 
     img {
         float: left;
-        padding: 10px;
+        margin-right: 10px;
         border-radius: 150px;
     }
 
@@ -154,9 +161,10 @@ a:hover, a:active, a:focus {
 }
 
 .footer {
-    background-color: $alt-bg-color;
+    background-color: $bg-color;
     padding: 20px 0px 20px 15px;
     margin-top: 60px;
+    width: 100vw;
     @media (min-width: $desktop) {
         position: fixed;
         bottom: 0;
