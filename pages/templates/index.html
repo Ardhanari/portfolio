@@ -37,7 +37,7 @@
     <div class="projects">
     
         {% for project in projects %}
-            <div class="project" style="background-image: url('images/{{ project.img }}');">
+            <div class="project" style="background-image: url('images/{{ project.img }}')">  
                 <div class="project-title">
                     <h5>{{ project.name }}</h5>
                 </div>
@@ -54,6 +54,9 @@
                     {{ project.year }}
                 </div>
                 
+                <div class="project-row">
+                    &nbsp;
+                </div>
                 
             </div>
         {% endfor %}

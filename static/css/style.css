@@ -23,7 +23,7 @@ body {
 
 h5 {
   font-size: 2em;
-  margin-block-start: 1em;
+  margin-block-start: 0em;
   margin-block-end: 1em; }
 
 .wrapper {
@@ -99,42 +99,58 @@ a:hover, a:active, a:focus {
       padding: 25px 25px 25px 25px; } }
 
 .project {
-  padding: 10px 10px 30px 10px;
+  position: relative;
+  border: 3px dotted red;
+  margin: 10px 10px 30px 10px;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat no-repeat;
   background-size: cover;
-  vertical-align: center;
-  /* display: flex; */
-  /*justify-content: space-evenly;
-    align-items: flex-start;
-    align-cont
-    ent: space-around;
-    flex-wrap: wrap; */
   grid-column: span 12;
   word-wrap: break-word; }
   @media (min-width: 1000px) {
     .project {
-      grid-column: span 3;
+      grid-column: span 4;
       margin: 10px 10px 0 0; } }
+
+.project::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .project-title {
   display: block;
   margin: auto;
   text-align: center;
-  padding: 15px 0px 0px 0px; }
+  padding: 15px 0px 0px 0px;
+  opacity: 1;
+  z-index: 2;
+  position: relative;
+  top: 0; }
 
 .project-row {
   opacity: 0;
   margin: auto;
   text-align: center;
-  padding: 15px 0px 0px 0px; }
+  padding: 15px 0px 0px 0px;
+  z-index: 2;
+  position: relative; }
 
 .footer {
   background-color: #000;
   padding: 20px 0px 20px 15px;
   margin-top: 60px;
+  position: relative;
   width: 100vw; }
   @media (min-width: 1000px) {
     .footer {
-      position: fixed;
       bottom: 0; } }
