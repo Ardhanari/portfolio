@@ -9,6 +9,3 @@ def index(request):
         return render(request, 'index.html', {'projects': projects, 'cv': cv})
     except:
         return render(request, 'index.html', {'projects': projects})
-
-    # cv = Cv.objects.latest('date')
-    # return render(request, 'index.html', {'projects': projects, 'cv': cv})
