@@ -19,4 +19,5 @@ class Cv(models.Model):
     date = models.DateTimeField(blank=False, null=True, auto_now=True)
 
     def __str__(self):
-        return "{0} CV".format(self.date)
+        formatedDate = self.date.strftime("%d.%m.%Y (%H:%M)")
+        return "{0} CV".format(formatedDate)
