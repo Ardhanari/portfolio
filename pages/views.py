@@ -5,7 +5,10 @@ from projects.models import Project, Cv
 def index(request): 
     projects = Project.objects.all()
     try:
-        cv = Cv.objects.latest("date")
+        cv = Cv.objects.latest('date')
         return render(request, 'index.html', {'projects': projects, 'cv': cv})
     except:
         return render(request, 'index.html', {'projects': projects})
+
+    # cv = Cv.objects.latest('date')
+    # return render(request, 'index.html', {'projects': projects, 'cv': cv})

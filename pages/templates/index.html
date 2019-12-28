@@ -26,7 +26,12 @@
             </p>
 
             <div class="links">
-                <a href="https://www.linkedin.com/in/katarzyna-sapa/">LinkedIn</a> <a href="https://github.com/Ardhanari">GitHub</a> <a href="urlforcontact">Contact me</a> <a href="media/{{ cv.file }}">Download CV (PDF)</a> 
+                <a href="https://www.linkedin.com/in/katarzyna-sapa/">LinkedIn</a> 
+                <a href="https://github.com/Ardhanari">GitHub</a> 
+                <a href="urlforcontact">Contact me</a> 
+                {% if cv %}
+                    <a href="media/{{ cv.file }}">Download CV (PDF)</a> 
+                {% endif %}
             </div>
         </div>
     </div>

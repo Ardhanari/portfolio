@@ -1,6 +1,6 @@
 from django.db import models
-# from django.utils import timezone
-from datetime import datetime, timezone
+from django.utils import timezone
+from datetime import datetime
 
 # Create your models here.
 
@@ -16,7 +16,7 @@ class Project(models.Model):
 
 class Cv(models.Model):
     file = models.FileField(upload_to='files/')
-    date = models.DateField(blank=False, null=True, auto_now=True)
+    date = models.DateTimeField(blank=False, null=True, auto_now=True)
 
     def __str__(self):
         return "{0} CV".format(self.date)
