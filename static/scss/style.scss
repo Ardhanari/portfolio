@@ -157,6 +157,7 @@ a:hover, a:active, a:focus {
     ent: space-around;
     flex-wrap: wrap; */
     grid-column: span 12;
+    word-wrap: break-word;
     @media (min-width: $desktop) {
         grid-column: span 3;
         margin: 10px 10px 0 0;
