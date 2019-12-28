@@ -4,7 +4,7 @@ db.sqlite3
 
 .gitpod.yml
 
-images/
+media/
 
 node_modules/
 package-lock.json
