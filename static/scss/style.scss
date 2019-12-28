@@ -165,11 +165,19 @@ a:hover, a:active, a:focus {
     }
 }
 
-.project-row {
+.project-title {
     display: block;
     margin: auto;
     text-align: center;
     padding: 15px 0px 0px 0px;
+} 
+
+.project-row {
+    visibility: hidden;
+    margin: auto;
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+
 }
 
 .footer {

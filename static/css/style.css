@@ -116,8 +116,14 @@ a:hover, a:active, a:focus {
       grid-column: span 3;
       margin: 10px 10px 0 0; } }
 
-.project-row {
+.project-title {
   display: block;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0px 0px 0px; }
+
+.project-row {
+  visibility: hidden;
   margin: auto;
   text-align: center;
   padding: 15px 0px 0px 0px; }
