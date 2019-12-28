@@ -52,6 +52,8 @@ body {
     background-color: $bg-color;
     color: $main-color;
     font-family: $font-family; 
+    margin: 0;
+    width: 100%;
 }
 
 h5 {
@@ -64,6 +66,7 @@ h5 {
     width: 100vw;
     @media (min-width: $desktop) {
         width: 1000px;
+        margin-left: 50px;
     }
 }
 
@@ -77,27 +80,35 @@ a:hover, a:active, a:focus {
 }
 
 .about {
-    // width: 90vw;
     margin-bottom: 30px;
+    width: 100vw; // nowe
     @media (min-width: $desktop) {
         height: 350px;
+        width: 100%; // nowe
     }
 }
 
 .intro {
-    width: 100%;
+    // width: 100%;
+    width: 100vw;
     height: inherit;
     display: block;
     position: relative;
-    padding: 10px; 
+    padding: 15px 0px;
+    // padding: 10px;
     background-color: $alt-bg-color;
     @media (min-width: $desktop) {
         padding: 25px 25px 0px 25px;   
+        width: 100%; // nowe
+    }
+    
+    h1 {
+        padding: 0px 10px;
     }
 
     img {
         float: left;
-        margin-right: 10px;
+        margin: 0 10px 10px 10px;
         border-radius: 150px;
     }
 
@@ -107,7 +118,11 @@ a:hover, a:active, a:focus {
         align-items: flex-start;
         align-content: space-around;
         flex-wrap: wrap;
-    
+        clear: both;
+        margin-top: 10px;
+        @media (min-width: $desktop) {
+            clear: none;
+        }
         a {
             color: $main-color;
             display: flex;
@@ -131,13 +146,16 @@ a:hover, a:active, a:focus {
 
 .projects {
     // @include flex();
+    padding: 15px 0px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     width: 100%;
-    padding: 10px; 
+    // width: 100vw;
+    // padding: 10px; 
     background-color: $alt-bg-color;
     @media (min-width: $desktop) {
         padding: 25px 25px 25px 25px;   
+        // width: 100%; // nowe
     }
 }
 .project {
@@ -183,23 +201,25 @@ a:hover, a:active, a:focus {
 } 
 
 .project-row {
-    opacity: 0;
     margin: auto;
     text-align: center;
     padding: 15px 0px 0px 0px;
     z-index: 2;
     position: relative;
+    @media (min-width: $desktop) {
+        opacity: 0;
+    }
 }
 
 .footer {
     background-color: $bg-color;
-    padding: 20px 0px 20px 15px;
+    padding: 20px 0px 10px 15px;
     margin-top: 60px;
     position: relative;
-    // top: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     @media (min-width: $desktop) {
         // position: fixed;
         bottom: 0;
+        padding: 20px 0px 20px 15px;
     }
 }
