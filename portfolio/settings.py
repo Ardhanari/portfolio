@@ -35,6 +35,7 @@ IP = os.getenv('IP')
 ALLOWED_HOSTS = [
     '8000-e0645ec8-c0a4-42af-bf14-5513e09edd36.ws-eu01.gitpod.io', 
     'ksapa.herokuapp.com', 
+    'www.ksapa.eu',
     'ksapa.eu',
     ]
 
