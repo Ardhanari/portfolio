@@ -151,6 +151,7 @@ a:hover, a:active, a:focus {
     background-size: cover;
     grid-column: span 12;
     word-wrap: break-word;
+    height: 400px;
     @media (min-width: $desktop) {
         grid-column: span 4;
         margin: 10px 10px 0 0;
@@ -185,11 +186,14 @@ a:hover, a:active, a:focus {
 } 
 
 .project-row {
-    margin: auto;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    padding: 15px 0px 0px 0px;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
     z-index: 2;
-    position: relative;
+    position: absolute;
+    bottom: 0px;
     @media (min-width: $desktop) {
         opacity: 0;
     }

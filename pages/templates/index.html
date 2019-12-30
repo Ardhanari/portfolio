@@ -30,7 +30,7 @@
                 <a href="https://github.com/Ardhanari">GitHub</a> 
                 <a href="mailto:katarzyna.sapa@gmail.com">Contact me</a> 
                 {% if cv %}
-                    <a href="media/{{ cv.file }}">Download CV (PDF)</a> 
+                    <a href="media/{{ cv.file }}">Download my CV</a> 
                 {% endif %}
             </div>
         </div>
@@ -45,20 +45,18 @@
                 </div>
 
                 <div class="project-row">
-                    <a href="{{ project.linkGit }}" target="_blank">GitHub</a>
-                </div>
-
-                <div class="project-row">
+                    <p>
+                        <a href="{{ project.linkGit }}" target="_blank">GitHub</a>
+                    </p>
+                    <p>    
+                
                     <a href="{{ project.linkDepl }}" target="_blank">Production</a>
-                </div>
-
-                <div class="project-row">
+                    </p>
+                    <p>
                     {{ project.year }}
+                    </p>
                 </div>
                 
-                <div class="project-row">
-                    &nbsp;
-                </div>
                 
             </div>
         {% endfor %}

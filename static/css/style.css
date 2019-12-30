@@ -105,7 +105,8 @@ a:hover, a:active, a:focus {
   background-repeat: no-repeat no-repeat;
   background-size: cover;
   grid-column: span 12;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  height: 400px; }
   @media (min-width: 1000px) {
     .project {
       grid-column: span 4;
@@ -137,11 +138,14 @@ a:hover, a:active, a:focus {
   top: 0; }
 
 .project-row {
-  margin: auto;
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  padding: 15px 0px 0px 0px;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
   z-index: 2;
-  position: relative; }
+  position: absolute;
+  bottom: 0px; }
   @media (min-width: 1000px) {
     .project-row {
       opacity: 0; } }
