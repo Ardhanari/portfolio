@@ -5,7 +5,7 @@ from datetime import datetime
 # Create your models here.
 
 class Project(models.Model):
-    img = models.ImageField(upload_to='img/')
+    img = models.ImageField(upload_to='img/projects/')
     name = models.CharField(max_length=100, default='', blank=False)
     linkGit = models.URLField(max_length=666, default='', blank=True)
     linkDepl = models.URLField(max_length=666, default='', blank=False)

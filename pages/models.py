@@ -4,3 +4,4 @@ from django.db import models
 
 class Description(models.Model):
     text = models.TextField(blank=False)
+    img = models.ImageField(upload_to='img/intro/', null=True)
