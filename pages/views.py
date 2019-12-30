@@ -4,7 +4,7 @@ from .models import Description
 
 # Create your views here.
 def index(request): 
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-year')
     desc = Description.objects.first()
     try:
         cv = Cv.objects.latest('date')
