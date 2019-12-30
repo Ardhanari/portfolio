@@ -178,9 +178,11 @@ a:hover, a:active, a:focus {
     }
 }
 
-.project:hover {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+@media (min-width: $desktop) {
+    .project:hover {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
 }
 
 .project::before {
