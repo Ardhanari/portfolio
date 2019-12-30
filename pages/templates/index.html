@@ -21,14 +21,14 @@
 
             <img src="https://media.licdn.com/dms/image/C5603AQFkPR8F4f0ywQ/profile-displayphoto-shrink_200_200/0?e=1582761600&v=beta&t=r03tw_YpzqbwtiXaUH_IiLli2ysB4SZDy6545FqDi9I">
             <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
-            architecto beatae vitae dicta sunt explicabo.
+            
+            {{ desc.text|linebreaks  }}
             </p>
 
             <div class="links">
                 <a href="https://www.linkedin.com/in/katarzyna-sapa/">LinkedIn</a> 
                 <a href="https://github.com/Ardhanari">GitHub</a> 
-                <a href="urlforcontact">Contact me</a> 
+                <a href="mailto:katarzyna.sapa@gmail.com">Contact me</a> 
                 {% if cv %}
                     <a href="media/{{ cv.file }}">Download CV (PDF)</a> 
                 {% endif %}
