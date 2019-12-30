@@ -118,7 +118,8 @@ a:hover, a:active, a:focus {
   background-size: cover;
   grid-column: span 12;
   word-wrap: break-word;
-  height: 400px; }
+  height: 400px;
+  transition: all .5s; }
   @media (min-width: 768px) {
     .project {
       grid-column: span 6;
@@ -127,6 +128,10 @@ a:hover, a:active, a:focus {
     .project {
       grid-column: span 4;
       margin: 10px 5px 0 5px; } }
+
+.project:hover {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95); }
 
 .project::before {
   content: ' ';
