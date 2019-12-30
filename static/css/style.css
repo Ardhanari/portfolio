@@ -175,5 +175,5 @@ a:hover, a:active, a:focus {
   @media (min-width: 1000px) {
     .footer {
       bottom: 0;
-      padding: 20px 0px 20px 15px;
+      padding: 20px 0px 20px 50px;
       opacity: 0.3; } }
