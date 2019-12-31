@@ -27,7 +27,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEVELOPMENT = os.getenv('DEVELOPMENT')
+# print(DEVELOPMENT)
+
+DEBUG = DEVELOPMENT
+
 
 PORT= os.getenv('PORT')
 IP = os.getenv('IP')
