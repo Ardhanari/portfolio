@@ -19,7 +19,7 @@
         <div class="intro">
             <h1> Katya Sapa portfolio</h1> 
 
-            <img src="media/{{desc.img}}">
+            <img src="{{ MEDIA_URL }}{{ desc.img }}">
             <p>
             
             {{ desc.text|linebreaks  }}
@@ -30,7 +30,7 @@
                 <a href="https://github.com/Ardhanari">GitHub</a> 
                 <a href="mailto:katarzyna.sapa@gmail.com">Contact me</a> 
                 {% if cv %}
-                    <a href="media/{{ cv.file }}">Download my CV</a> 
+                    <a href="{{ MEDIA_URL }}{{ cv.file }}">Download my CV</a> 
                 {% endif %}
             </div>
         </div>
@@ -39,7 +39,7 @@
     <div class="projects">
     
         {% for project in projects %}
-            <div class="project" style="background-image: url('media/{{ project.img }}')">  
+            <div class="project" style="background-image: url('{{ MEDIA_URL }}{{ project.img }}')">  
                 <div class="project-title">
                     <h5>{{ project.name }}</h5>
                 </div>
