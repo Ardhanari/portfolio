@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Katya Sapa portfolio</title>
+    <title>Katarzyna Sapa - portfolio</title>
     <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
     <div class="about">
 
         <div class="intro">
-            <h1> Katya Sapa portfolio</h1> 
+            <h1> Katarzyna Sapa</h1> 
 
             <img src="{{ MEDIA_URL }}{{ desc.img }}">
             <p>
@@ -37,6 +37,7 @@
     </div>
 
     <div class="projects">
+        <h2> Projects I worked on</h2>
     
         {% for project in projects %}
             <div class="project" style="background-image: url('{{ MEDIA_URL }}{{ project.img }}')">  
@@ -45,6 +46,9 @@
                 </div>
 
                 <div class="project-row">
+                    <p>
+                        {{ project.desc }}
+                    </p>
                     <p>
                         <a href="{{ project.linkGit }}" target="_blank">GitHub</a>
                     </p>
