@@ -93,10 +93,12 @@ h1, h2 {
     position: relative;
     padding: 15px 10px;
     background-color: $alt-bg-color;
+    box-sizing: border-box;
     @media (min-width: $desktop) {
         text-align: left;
         padding: 10px 25px 0px 25px;   
         width: 100%; 
+        box-sizing: content-box;
     }
 
     img {
@@ -154,9 +156,11 @@ h1, h2 {
     grid-template-columns: repeat(12, 1fr);
     width: 100vw;
     background-color: $alt-bg-color;
+    box-sizing: border-box;
     @media (min-width: $desktop) {
         width: 100%;
         padding: 25px 25px 25px 25px;   
+        box-sizing: content-box;
     }
 }
 .project {
